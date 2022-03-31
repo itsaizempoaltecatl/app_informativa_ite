@@ -14,23 +14,43 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Material App Bar'),
-      ),
-      body: Center(
-        child: Container(
-          child: Text('Hello World'),
+        appBar: AppBar(
+          title: Text('Material App Bar'),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(
-            icon: Icon(LineIcons.history), label: 'Historia'),
-        BottomNavigationBarItem(
-            icon: Icon(LineIcons.addressBook), label: 'Directorio'),
-        BottomNavigationBarItem(
-            icon: Icon(LineIcons.fileInvoice), label: 'Aviso'),
-        BottomNavigationBarItem(icon: Icon(LineIcons.book), label: 'Manual')
-      ]),
-    );
+        body: Center(
+          child: Container(
+            child: Text('Hello World'),
+          ),
+        ),
+        bottomNavigationBar: Theme(
+          data:
+              Theme.of(context).copyWith(canvasColor: const Color(0xFF1b396a)),
+          child: BottomNavigationBar(items: const [
+            BottomNavigationBarItem(
+                icon: Icon(
+                  LineIcons.history,
+                  color: Colors.white,
+                ),
+                label: 'Historia'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  LineIcons.addressBook,
+                  color: Colors.white,
+                ),
+                label: 'Directorio'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  LineIcons.fileInvoice,
+                  color: Colors.white,
+                ),
+                label: 'Aviso'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  LineIcons.book,
+                  color: Colors.white,
+                ),
+                label: 'Manual')
+          ]),
+        ));
   }
 }
