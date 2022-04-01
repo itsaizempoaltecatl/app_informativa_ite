@@ -253,3 +253,6 @@ build/app/outputs/flutter-apk/app-debug.apk
 build/app/outputs/flutter-apk/app.apk
 build/app/outputs/flutter-apk/app.apk.sha1
 build/app/tmp/kotlin-classes/debug/com/example/app_informativa_ite/MainActivity.class
+*.json
+.dart_tool/version
+.dart_tool/package_config_subset
