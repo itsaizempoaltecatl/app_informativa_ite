@@ -2,53 +2,27 @@ import 'package:app_informativa_ite/aviso_privacidad/aviso_privacidad.dart';
 import 'package:app_informativa_ite/directorio/directorio.dart';
 import 'package:app_informativa_ite/historia/historia_menu.dart';
 import 'package:app_informativa_ite/manual/manual.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:line_icons/line_icons.dart';
 
-import '../historia/antecedentes.dart';
+import '../historia/sub_historia/antecedentes.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({
+class HomePage extends StatelessWidget {
+  const HomePage({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int currentPage = 0;
-  final Map screens = {
-    0: {'name': 'Historia', 'screen': const History()},
-    1: {'name': 'Directorio', 'screen': const Directory()},
-    2: {'name': 'Aviso de privacidad', 'screen': const Privacy()},
-    3: {'name': 'Manual de identidad grafica', 'screen': const Manual()},
-    4: {'name': 'Antecedentes', 'screen': const Past()}
-  };
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text('${screens[currentPage]['name']}')),
+    return CupertinoTabScaffold(
+      tabBar: CupertinoTabBar(
+        height: 60,
         backgroundColor: const Color(0xFF1b396a),
-      ),
-      body: screens[currentPage]['screen'],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color(0xFF1b396a),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
-        selectedFontSize: 20,
-        unselectedFontSize: 15,
-        iconSize: 25,
-        currentIndex: currentPage,
-        onTap: (index) {
-          setState(() {
-            currentPage = index;
-          });
-        },
+        inactiveColor: Colors.white,
+        activeColor: Colors.white,
+        iconSize: 35,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(
@@ -76,6 +50,30 @@ class _HomePageState extends State<HomePage> {
               label: 'Manual')
         ],
       ),
+      tabBuilder: (context, index) {
+        switch (index) {
+          case 0:
+            return CupertinoTabView(builder: (context) {
+              return const CupertinoPageScaffold(child: History());
+            });
+          case 1:
+            return CupertinoTabView(builder: (context) {
+              return const CupertinoPageScaffold(child: Directory());
+            });
+          case 2:
+            return CupertinoTabView(builder: (context) {
+              return const CupertinoPageScaffold(child: Privacy());
+            });
+          case 3:
+            return CupertinoTabView(builder: (context) {
+              return const CupertinoPageScaffold(child: Manual());
+            });
+          default:
+            return CupertinoTabView(builder: (context) {
+              return const CupertinoPageScaffold(child: History());
+            });
+        }
+      },
     );
   }
 }
