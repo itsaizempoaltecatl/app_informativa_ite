@@ -14,7 +14,6 @@ class Privacy extends StatelessWidget {
           RichText(
             text: const TextSpan(
               text: 'Aviso de Privacidad ',
-              
             ),
           )
         ],
