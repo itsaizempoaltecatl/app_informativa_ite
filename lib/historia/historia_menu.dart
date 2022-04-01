@@ -1,4 +1,6 @@
 import 'package:app_informativa_ite/historia/sub_historia/antecedentes.dart';
+import 'package:app_informativa_ite/historia/sub_historia/lema_logo_mascota.dart';
+import 'package:app_informativa_ite/historia/sub_historia/mision_vision_valores.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -23,19 +25,50 @@ class _HistoryState extends State<History> {
       child: Container(
           width: double.infinity,
           height: double.infinity,
-          padding: const EdgeInsets.fromLTRB(20, 30, 20, 10),
-          color: Colors.cyanAccent,
+          padding: const EdgeInsets.fromLTRB(20, 50, 20, 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        CupertinoPageRoute(builder: (context) => const Past()));
-                  },
-                  child: Text("Antecendentes")),
+              ButtonMenu(label: 'Antecedentes', screen: const Past()),
+              const SizedBox(
+                height: 50,
+              ),
+              ButtonMenu(
+                  label: 'Misión, Visión y Valores',
+                  screen: const MisionVisionValues()),
+              const SizedBox(
+                height: 50,
+              ),
+              ButtonMenu(
+                  label: 'Lema, logo y mascota', screen: const MottoLogoPet())
             ],
           )),
+    );
+  }
+}
+
+class ButtonMenu extends StatelessWidget {
+  String label;
+  var screen;
+  ButtonMenu({Key? key, required this.label, required this.screen})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: TextButton.styleFrom(
+          primary: Colors.white,
+          textStyle: const TextStyle(fontSize: 20),
+          backgroundColor: const Color(0xFF1b396a),
+          minimumSize: const Size(double.infinity, 60)),
+      onPressed: () {
+        Navigator.push(
+            context, CupertinoPageRoute(builder: (context) => screen));
+      },
+      child: Text(
+        label,
+        style: const TextStyle(fontSize: 30),
+      ),
     );
   }
 }
