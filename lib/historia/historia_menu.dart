@@ -1,76 +1,14 @@
-// ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable
-
-import 'package:app_informativa_ite/historia/sub_historia/antecedentes.dart';
-import 'package:app_informativa_ite/historia/sub_historia/lema_logo_mascota.dart';
-import 'package:app_informativa_ite/historia/sub_historia/mision_vision_valores.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class History extends StatefulWidget {
+class History extends StatelessWidget {
   const History({Key? key}) : super(key: key);
 
   @override
-  State<History> createState() => _HistoryState();
-}
-
-class _HistoryState extends State<History> {
-  @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        backgroundColor: Color(0xFF1b396a),
-        middle: Text(
-          'Historia',
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-      ),
-      child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          padding: const EdgeInsets.fromLTRB(20, 100, 20, 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ButtonMenu(label: 'Antecedentes', screen: const Past()),
-              const SizedBox(
-                height: 50,
-              ),
-              ButtonMenu(
-                  label: 'Misión, Visión y Valores',
-                  screen: const MisionVisionValues()),
-              const SizedBox(
-                height: 50,
-              ),
-              ButtonMenu(
-                  label: 'Lema, logo y mascota', screen: const MottoLogoPet())
-            ],
-          )),
-    );
-  }
-}
-
-class ButtonMenu extends StatelessWidget {
-  String label;
-  var screen;
-  ButtonMenu({Key? key, required this.label, required this.screen})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: TextButton.styleFrom(
-          primary: Colors.white,
-          textStyle: const TextStyle(fontSize: 40),
-          backgroundColor: const Color(0xFF1b396a),
-          minimumSize: const Size(double.infinity, 70)),
-      onPressed: () {
-        Navigator.push(
-            context, CupertinoPageRoute(builder: (context) => screen));
-      },
-      child: Text(
-        label,
-        style: const TextStyle(fontSize: 40),
-      ),
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.fromLTRB(20, 30, 20, 10),
+      color: Colors.cyanAccent,
     );
   }
 }
