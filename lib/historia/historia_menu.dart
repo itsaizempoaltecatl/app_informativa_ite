@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable
+
 import 'package:app_informativa_ite/historia/sub_historia/antecedentes.dart';
 import 'package:app_informativa_ite/historia/sub_historia/lema_logo_mascota.dart';
 import 'package:app_informativa_ite/historia/sub_historia/mision_vision_valores.dart';
@@ -25,9 +27,9 @@ class _HistoryState extends State<History> {
       child: Container(
           width: double.infinity,
           height: double.infinity,
-          padding: const EdgeInsets.fromLTRB(20, 50, 20, 10),
+          padding: const EdgeInsets.fromLTRB(20, 100, 20, 10),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               ButtonMenu(label: 'Antecedentes', screen: const Past()),
               const SizedBox(
@@ -58,16 +60,16 @@ class ButtonMenu extends StatelessWidget {
     return ElevatedButton(
       style: TextButton.styleFrom(
           primary: Colors.white,
-          textStyle: const TextStyle(fontSize: 20),
+          textStyle: const TextStyle(fontSize: 40),
           backgroundColor: const Color(0xFF1b396a),
-          minimumSize: const Size(double.infinity, 60)),
+          minimumSize: const Size(double.infinity, 70)),
       onPressed: () {
         Navigator.push(
             context, CupertinoPageRoute(builder: (context) => screen));
       },
       child: Text(
         label,
-        style: const TextStyle(fontSize: 30),
+        style: const TextStyle(fontSize: 40),
       ),
     );
   }

@@ -7,8 +7,6 @@ import 'package:flutter/material.dart';
 
 import 'package:line_icons/line_icons.dart';
 
-import '../historia/sub_historia/antecedentes.dart';
-
 class HomePage extends StatelessWidget {
   const HomePage({
     Key? key,
