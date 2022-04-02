@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 class Manual extends StatelessWidget {
   const Manual({Key? key}) : super(key: key);
 
@@ -15,8 +15,14 @@ class Manual extends StatelessWidget {
         ),
       ),
       child: Container(
-        height: double.infinity,
-        child: Center(child: Text("Manual")),
+          width: double.infinity,
+          alignment: Alignment.center,
+        
+          color: Colors.white,
+
+        child: SfPdfViewer.network('https://www.ensenada.tecnm.mx/wp-content/uploads/2020/06/Manual_de_Identidad_Grafica-1.pdf')
+      
+      
       ),
     );
   }
