@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
 
   Map screens = {
     0: {'name': 'Historia', 'screen': const History()},
-    1: {'name': 'Directorio', 'screen': const Directory()},
+    1: {'name': 'Directorio', 'screen': Directory()},
     2: {'name': 'Aviso de privacidad', 'screen': const Privacy()},
     3: {'name': 'Manual de identidad grafica', 'screen': const Manual()}
   };
