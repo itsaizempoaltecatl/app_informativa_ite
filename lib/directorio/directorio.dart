@@ -1,4 +1,4 @@
-import 'dart:ui';
+// ignore_for_file: must_be_immutable
 
 import 'package:app_informativa_ite/directorio/sub_directorio/organigrama.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,7 +24,10 @@ class Directory extends StatelessWidget {
                   CupertinoPageRoute(
                       builder: (context) => const OrganizationChart()));
             },
-            child: const Icon(LineIcons.sitemap)),
+            child: const Icon(
+              LineIcons.sitemap,
+              color: Colors.white,
+            )),
       ),
       child: Container(
         color: Colors.white,

@@ -53,23 +53,23 @@ class HomePage extends StatelessWidget {
         switch (index) {
           case 0:
             return CupertinoTabView(builder: (context) {
-              return const History();
+              return const CupertinoPageScaffold(child: History());
             });
           case 1:
             return CupertinoTabView(builder: (context) {
-              return Directory();
+              return const CupertinoPageScaffold(child: Directory());
             });
           case 2:
             return CupertinoTabView(builder: (context) {
-              return const Privacy();
+              return const CupertinoPageScaffold(child: Privacy());
             });
           case 3:
             return CupertinoTabView(builder: (context) {
-              return const Manual();
+              return const CupertinoPageScaffold(child: Manual());
             });
           default:
             return CupertinoTabView(builder: (context) {
-              return const History();
+              return const CupertinoPageScaffold(child: History());
             });
         }
       },
