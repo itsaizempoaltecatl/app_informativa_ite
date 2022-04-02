@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
-import '../clases/mapeo.dart';
+import '../const/mapeo.dart';
 
 class Directory extends StatelessWidget {
   const Directory({Key? key}) : super(key: key);
@@ -107,23 +107,17 @@ class BuilderIndex extends StatelessWidget {
       child: ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          itemCount: Mapeo.listaDirectorio[optionList].length,
+          itemCount: listaDirectorio[optionList].length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
               color: (index % 2 == 0) ? Colors.grey[100] : Colors.white,
               child: Row(
                 children: [
+                  BoxInfo(value: listaDirectorio[optionList][index]['Cargo']),
+                  BoxInfo(value: listaDirectorio[optionList][index]['Nombre']),
+                  BoxInfo(value: listaDirectorio[optionList][index]['Correo']),
                   BoxInfo(
-                      value: Mapeo.listaDirectorio[optionList][index]['Cargo']),
-                  BoxInfo(
-                      value: Mapeo.listaDirectorio[optionList][index]
-                          ['Nombre']),
-                  BoxInfo(
-                      value: Mapeo.listaDirectorio[optionList][index]
-                          ['Correo']),
-                  BoxInfo(
-                      value: Mapeo.listaDirectorio[optionList][index]
-                          ['Extension']),
+                      value: listaDirectorio[optionList][index]['Extension']),
                 ],
               ),
             );

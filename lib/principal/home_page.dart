@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         height: 60,
         backgroundColor: blueIte,
         inactiveColor: Colors.white,
-        activeColor: Colors.white,
+        activeColor: const Color(0xFFC0C4C6),
         iconSize: 35,
         items: const [
           BottomNavigationBarItem(
