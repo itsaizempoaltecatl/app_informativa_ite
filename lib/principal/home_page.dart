@@ -1,3 +1,4 @@
+import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:app_informativa_ite/directorio/directorio.dart';
 import 'package:app_informativa_ite/historia/historia_menu.dart';
 import 'package:app_informativa_ite/manual/manual.dart';
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
         height: 60,
-        backgroundColor: const Color(0xFF1b396a),
+        backgroundColor: blueIte,
         inactiveColor: Colors.white,
         activeColor: Colors.white,
         iconSize: 35,

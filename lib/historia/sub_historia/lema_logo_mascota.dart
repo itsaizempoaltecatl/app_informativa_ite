@@ -1,3 +1,4 @@
+import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MottoLogoPet extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: const Color(0xFF1b396a),
+        backgroundColor: blueIte,
         middle: const Text('Lema, logo y mascota',
             style: TextStyle(color: Colors.white, fontSize: 20)),
       ),

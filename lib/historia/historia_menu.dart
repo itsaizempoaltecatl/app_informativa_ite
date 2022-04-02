@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables
 
+import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:app_informativa_ite/historia/sub_historia/antecedentes.dart';
 import 'package:app_informativa_ite/historia/sub_historia/lema_logo_mascota.dart';
 import 'package:app_informativa_ite/historia/sub_historia/mision_vision_valores.dart';
@@ -12,9 +13,9 @@ class History extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        backgroundColor: Color(0xFF1b396a),
-        middle: Text(
+      navigationBar: CupertinoNavigationBar(
+        backgroundColor: blueIte,
+        middle: const Text(
           'Historia',
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),

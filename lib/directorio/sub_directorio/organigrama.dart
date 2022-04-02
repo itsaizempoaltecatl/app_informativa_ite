@@ -1,3 +1,4 @@
+import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,13 +15,14 @@ class OrganizationChart extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
-          backgroundColor: const Color(0xFF1b396a),
+          backgroundColor: blueIte,
           middle: const Text(
             'Organigrama',
           ),
         ),
         child: Container(
           width: double.infinity,
+          height: double.infinity,
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
           color: Colors.white,
           child: SingleChildScrollView(

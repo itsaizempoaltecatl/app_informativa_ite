@@ -1,3 +1,4 @@
+import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,9 +10,9 @@ class Manual extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        backgroundColor: Color(0xFF1b396a),
-        middle: Text(
+      navigationBar: CupertinoNavigationBar(
+        backgroundColor: blueIte,
+        middle: const Text(
           'Manual de identidad gráfica',
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),

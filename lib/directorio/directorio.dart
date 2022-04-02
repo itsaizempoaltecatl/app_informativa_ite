@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:app_informativa_ite/directorio/sub_directorio/organigrama.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class Directory extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        backgroundColor: const Color(0xFF1b396a),
+        backgroundColor: blueIte,
         middle: const Text(
           'Directorio',
         ),
