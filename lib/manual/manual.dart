@@ -14,16 +14,7 @@ class Manual extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
       ),
-      child: Container(
-          width: double.infinity,
-          alignment: Alignment.center,
-        
-          color: Colors.white,
-
-        child: SfPdfViewer.network('https://www.ensenada.tecnm.mx/wp-content/uploads/2020/06/Manual_de_Identidad_Grafica-1.pdf')
-      
-      
-      ),
+      child:SfPdfViewer.network('https://www.ensenada.tecnm.mx/wp-content/uploads/2020/06/Manual_de_Identidad_Grafica-1.pdf')
     );
   }
 }
