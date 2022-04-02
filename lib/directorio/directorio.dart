@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +25,7 @@ class Directory extends StatelessWidget {
               child: const Text(
                 "Direccíon",
                 textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12),
               ),
               color: Colors.grey,
               width: double.infinity,
@@ -30,9 +33,9 @@ class Directory extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text("Cargo"),
-                Text("Nombre"),
-                Text("Correo"),
+                Text("Cargo", style:  TextStyle(fontSize: 12),),
+                Text("Nombre", style:  TextStyle(fontSize: 12),),
+                Text("Correo", style:  TextStyle(fontSize: 12),),
               ],
             ),
             contenidoDirectorio(context, 'Direccion'),
@@ -40,6 +43,7 @@ class Directory extends StatelessWidget {
               child: const Text(
                 "Subdireccíon Académica",
                 textAlign: TextAlign.center,
+                style:  TextStyle(fontSize: 12),
               ),
               color: Colors.grey,
               width: double.infinity,
@@ -47,10 +51,10 @@ class Directory extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text("Cargo"),
-                Text("Nombre"),
-                Text("Correo"),
-                Text("Extensíon"),
+                Text("Cargo", style: TextStyle(fontSize: 12),),
+                Text("Nombre", style: TextStyle(fontSize: 12),),
+                Text("Correo", style: TextStyle(fontSize: 12),),
+                Text("Extensíon", style: TextStyle(fontSize: 12),),
               ],
             ),
             contenidoDirectorio_(context, 'Subdireccion'),
@@ -357,13 +361,13 @@ class Directory extends StatelessWidget {
         child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(listaDirectorio[seccion][0]['Cargo'].toString()),
+        Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12),),
         Text(listaDirectorio[seccion][0]['Nombre'][0].toString() +
             "\n" +
-            listaDirectorio[seccion][0]['Nombre'][1].toString()),
+            listaDirectorio[seccion][0]['Nombre'][1].toString(),style: const TextStyle(fontSize: 12),),
         Text(listaDirectorio[seccion][0]['Correo'][0].toString() +
             "\n" +
-            listaDirectorio[seccion][0]['Correo'][1].toString()),
+            listaDirectorio[seccion][0]['Correo'][1].toString(), style: const TextStyle(fontSize: 12),),
       ],
     ));
   }
