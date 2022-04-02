@@ -12,7 +12,7 @@ bool primera = true;
         children: [
           Container(child: const Text("Direccíon", textAlign: TextAlign.center, ), color: Colors.grey, width: double.infinity,),
           Row( 
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [
             Text("Cargo"),
             Text("Nombre"),
@@ -29,7 +29,7 @@ bool primera = true;
             Text("Extensíon"),
           ],),
           contenidoDirectorio_(context, 'Subdireccion'),
-          Container(child: const Text("Subdirección de Servicios Administrativos", textAlign: TextAlign.center, ), color: Colors.grey, width: double.infinity,),
+          Container(child: const Text("Subdireccion Administrativos", textAlign: TextAlign.center, ), color: Colors.grey, width: double.infinity,),
           Row( 
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
@@ -39,46 +39,6 @@ bool primera = true;
             Text("Extensíon"),
           ],),
           contenidoDirectorio_(context, 'Subdireccion Administrativos'),
-          Container(child: const Text("Subdirección de Planeación y Vinculación", textAlign: TextAlign.center, ), color: Colors.grey, width: double.infinity,),
-          Row( 
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-            Text("Cargo"),
-            Text("Nombre"),
-            Text("Correo"),
-            Text("Extensíon"),
-          ],),
-          contenidoDirectorio_(context, 'Subdireccion PV'),
-          Container(child: const Text("Coordinación de Carrera", textAlign: TextAlign.center, ), color: Colors.grey, width: double.infinity,),
-          Row( 
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-            Text("Cargo"),
-            Text("Nombre"),
-            Text("Correo"),
-            Text("Extensíon"),
-          ],),
-          contenidoDirectorio_(context, 'Coordinacion Carrera'),
-          Container(child: const Text("Coordinaciones de Posgrado", textAlign: TextAlign.center, ), color: Colors.grey, width: double.infinity,),
-          Row( 
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-            Text("Cargo"),
-            Text("Nombre"),
-            Text("Correo"),
-            Text("Extensíon"),
-          ],),
-          contenidoDirectorio_(context, 'Coordinacion Posgrado'),
-          Container(child: const Text("Coordinaciones de Sistema de Gestión", textAlign: TextAlign.center, ), color: Colors.grey, width: double.infinity,),
-          Row( 
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-            Text("Cargo"),
-            Text("Nombre"),
-            Text("Correo"),
-            Text("Extensíon"),
-          ],),
-          contenidoDirectorio_(context, 'Gestion'),
         ],
       ),
     );
@@ -132,14 +92,14 @@ bool primera = true;
       1: {'Cargo': 'Coordinador de la Maestría en Ingeniería Aeroespacial', 'Nombre':'Campos García Josefina', 'Correo':'coord_mia@ite.edu.mx', 'Extension':'1063'},
       2: {'Cargo': 'Coordinador de la Maestría en Ciencias en Ingeniería Mecatrónica', 'Nombre':'     ', 'Correo':'coord_mcim@ite.edu.mx', 'Extension':'3005'},
     },
-    'Gestion':{
+    'Coordinaciones Gestion':{
       0: {'Cargo': 'Coordinador del Sistema de Gestión de la Calidad', 'Nombre':'Gutiérrez Manuel Carlos Alberto', 'Correo':'sgc@ite.edu.mx', 'Extension':'----'},
       1: {'Cargo': 'Coordinadora del Sistema de Gestión Ambiental', 'Nombre':'Ardines Castillo Jocelyn Giselle', 'Correo':'sga@ite.edu.mx', 'Extension':'----'},
       2: {'Cargo': 'Coordinadora del Modelo de Igualdad de Género', 'Nombre':'Ochoa Gaytán Wendy', 'Correo':'igualdad@ite.edu.mx', 'Extension':'----'},
       3: {'Cargo': 'Coordinador del Sistema de Gestión de Seguridad y Salud en el Trabajo', 'Nombre':'Peña Miranda Sergio', 'Correo':'seguridad@ite.edu.mx', 'Extension':'----'},
       4: {'Cargo': 'Coordinador de Residuos Sólidos Urbanos y Residuos Peligrosos', 'Nombre':'Anaya Bázua Alfredo Alejandro', 'Correo':'aanaya@ite.edu.mx', 'Extension':'----'},
       5: {'Cargo': 'Coordinador del Uso Eficiente de Agua y Energía Eletrica', 'Nombre':'Valle Peñuelas Fernando', 'Correo':'mantenimiento@ite.edu.mx', 'Extension':'----'},
-    },
+    }
   };
 
   Widget contenidoDirectorio(BuildContext context, String seccion) {
@@ -162,7 +122,7 @@ bool primera = true;
     Center(child: 
     Column(
       children: [
-        Container(height: 2, color: const Color(0xFFC0C4C6),),
+        const SizedBox(height: 5,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -172,7 +132,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][0]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -182,7 +142,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][1]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -192,7 +152,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][2]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -202,7 +162,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][3]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -212,7 +172,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][4]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -222,7 +182,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][5]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -232,7 +192,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][6]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -242,7 +202,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][7]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -261,61 +221,61 @@ bool primera = true;
       return
       Center(child: Column(
         children: [
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][0]['Cargo'].toString()), width: 105,), 
+          SizedBox(child: Text(listaDirectorio[seccion][0]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][0]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][0]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][0]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][1]['Cargo'].toString()), width: 105,), 
+          SizedBox(child: Text(listaDirectorio[seccion][1]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][1]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][1]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][1]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][2]['Cargo'].toString()), width: 105,), 
+          SizedBox(child: Text(listaDirectorio[seccion][2]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][2]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][2]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][2]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][3]['Cargo'].toString()), width: 105,), 
+          SizedBox(child: Text(listaDirectorio[seccion][3]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][3]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][3]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][3]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][4]['Cargo'].toString()), width: 105,), 
+          SizedBox(child: Text(listaDirectorio[seccion][4]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][4]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][4]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][4]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][5]['Cargo'].toString()), width: 105,), 
+          SizedBox(child: Text(listaDirectorio[seccion][5]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][5]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][5]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][5]['Extension']),
@@ -330,7 +290,7 @@ bool primera = true;
       return
       Center(child: Column(
         children: [
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -340,7 +300,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][0]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -350,7 +310,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][1]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -360,7 +320,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][2]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -370,7 +330,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][3]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -380,7 +340,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][4]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -390,7 +350,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][5]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -409,101 +369,101 @@ bool primera = true;
       return
       Center(child: Column(
         children: [
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][0]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][0]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][0]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][0]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][0]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][1]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][1]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][1]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][1]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][1]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][2]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][2]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][2]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][2]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][2]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][3]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][3]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][3]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][3]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][3]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][4]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][4]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][4]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][4]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][4]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][5]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][5]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][5]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][5]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][5]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][6]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][6]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][6]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][6]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][6]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][7]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][7]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][7]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][7]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][7]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][8]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][8]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][8]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][8]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][8]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-          SizedBox(child: Text(listaDirectorio[seccion][9]['Cargo'].toString()), width: 107,), 
+          SizedBox(child: Text(listaDirectorio[seccion][9]['Cargo'].toString()), width: 90,), 
           SizedBox(child: Text(listaDirectorio[seccion][9]['Nombre'].toString()), width: 80,),
           SizedBox(child: Text(listaDirectorio[seccion][9]['Correo'].toString()), width: 170,),
           Text(listaDirectorio[seccion][9]['Extension']),
@@ -518,46 +478,7 @@ bool primera = true;
       return
       Center(child: Column(
         children: [
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-          SizedBox(child: Text(listaDirectorio[seccion][0]['Cargo'].toString()), width: 95,), 
-          SizedBox(child: Text(listaDirectorio[seccion][0]['Nombre'].toString()), width: 80,),
-          SizedBox(child: Text(listaDirectorio[seccion][0]['Correo'].toString()), width: 170,),
-          Text(listaDirectorio[seccion][0]['Extension']),
-          ],
-          ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
-          Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-          SizedBox(child: Text(listaDirectorio[seccion][1]['Cargo'].toString()), width: 95,), 
-          SizedBox(child: Text(listaDirectorio[seccion][1]['Nombre'].toString()), width: 80,),
-          SizedBox(child: Text(listaDirectorio[seccion][1]['Correo'].toString()), width: 170,),
-          Text(listaDirectorio[seccion][1]['Extension']),
-          ],
-          ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
-          Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-          SizedBox(child: Text(listaDirectorio[seccion][2]['Cargo'].toString()), width: 95,), 
-          SizedBox(child: Text(listaDirectorio[seccion][2]['Nombre'].toString()), width: 80,),
-          SizedBox(child: Text(listaDirectorio[seccion][2]['Correo'].toString()), width: 170,),
-          Text(listaDirectorio[seccion][2]['Extension']),
-          ],
-          ),
-        ],
-      ),
-      );
-    }
-    if(seccion == 'Gestion')
-    {
-      return
-      Center(child: Column(
-        children: [
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -567,7 +488,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][0]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -577,7 +498,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][1]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -587,7 +508,46 @@ bool primera = true;
           Text(listaDirectorio[seccion][2]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+        ],
+      ),
+      );
+    }
+    if(seccion == 'Coordinacion Gestion')
+    {
+      return
+      Center(child: Column(
+        children: [
+          const SizedBox(height: 5,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+          SizedBox(child: Text(listaDirectorio[seccion][0]['Cargo'].toString()), width: 90,), 
+          SizedBox(child: Text(listaDirectorio[seccion][0]['Nombre'].toString()), width: 80,),
+          SizedBox(child: Text(listaDirectorio[seccion][0]['Correo'].toString()), width: 170,),
+          Text(listaDirectorio[seccion][0]['Extension']),
+          ],
+          ),
+          const SizedBox(height: 5,),
+          Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+          SizedBox(child: Text(listaDirectorio[seccion][1]['Cargo'].toString()), width: 90,), 
+          SizedBox(child: Text(listaDirectorio[seccion][1]['Nombre'].toString()), width: 80,),
+          SizedBox(child: Text(listaDirectorio[seccion][1]['Correo'].toString()), width: 170,),
+          Text(listaDirectorio[seccion][1]['Extension']),
+          ],
+          ),
+          const SizedBox(height: 5,),
+          Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+          SizedBox(child: Text(listaDirectorio[seccion][2]['Cargo'].toString()), width: 90,), 
+          SizedBox(child: Text(listaDirectorio[seccion][2]['Nombre'].toString()), width: 80,),
+          SizedBox(child: Text(listaDirectorio[seccion][2]['Correo'].toString()), width: 170,),
+          Text(listaDirectorio[seccion][2]['Extension']),
+          ],
+          ),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -597,7 +557,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][3]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -607,7 +567,7 @@ bool primera = true;
           Text(listaDirectorio[seccion][4]['Extension']),
           ],
           ),
-          Container(height: 2, color: const Color(0xFFC0C4C6),),
+          const SizedBox(height: 5,),
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
