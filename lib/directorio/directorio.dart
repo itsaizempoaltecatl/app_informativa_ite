@@ -15,7 +15,7 @@ class Directory extends StatelessWidget {
         backgroundColor: Color(0xFF1b396a),
         middle: Text(
           'Directorio',
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 20, decoration: TextDecoration.none),
         ),
       ),
       child: SingleChildScrollView(
@@ -25,7 +25,7 @@ class Directory extends StatelessWidget {
               child: const Text(
                 "Direccíon",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 18, decoration: TextDecoration.none, color: Colors.black),
               ),
               color: Colors.grey,
               width: double.infinity,
@@ -33,9 +33,9 @@ class Directory extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                Text("Cargo", style:  TextStyle(fontSize: 12),),
-                Text("Nombre", style:  TextStyle(fontSize: 12),),
-                Text("Correo", style:  TextStyle(fontSize: 12),),
+                Text("Cargo", style:  TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Nombre", style:  TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Correo", style:  TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
               ],
             ),
             contenidoDirectorio(context, 'Direccion'),
@@ -43,7 +43,7 @@ class Directory extends StatelessWidget {
               child: const Text(
                 "Subdireccíon Académica",
                 textAlign: TextAlign.center,
-                style:  TextStyle(fontSize: 12),
+                style:  TextStyle(fontSize: 18, decoration: TextDecoration.none, color: Colors.black),
               ),
               color: Colors.grey,
               width: double.infinity,
@@ -51,17 +51,18 @@ class Directory extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text("Cargo", style: TextStyle(fontSize: 12),),
-                Text("Nombre", style: TextStyle(fontSize: 12),),
-                Text("Correo", style: TextStyle(fontSize: 12),),
-                Text("Extensíon", style: TextStyle(fontSize: 12),),
+                Text("Cargo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Nombre", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Correo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Extensíon", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
               ],
             ),
             contenidoDirectorio_(context, 'Subdireccion'),
             Container(
               child: const Text(
-                "Subdireccion Administrativos",
+                "Subdirección de Servicios Administrativos",
                 textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18, decoration: TextDecoration.none, color: Colors.black),
               ),
               color: Colors.grey,
               width: double.infinity,
@@ -69,13 +70,89 @@ class Directory extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text("Cargo"),
-                Text("Nombre"),
-                Text("Correo"),
-                Text("Extensíon"),
+                Text("Cargo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Nombre", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Correo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Extensíon", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
               ],
             ),
             contenidoDirectorio_(context, 'Subdireccion Administrativos'),
+            Container(
+              child: const Text(
+                "Subdirección de Planeación y Vinculación",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18, decoration: TextDecoration.none, color: Colors.black),
+              ),
+              color: Colors.grey,
+              width: double.infinity,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text("Cargo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Nombre", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Correo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Extensíon", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+              ],
+            ),
+            contenidoDirectorio_(context, 'Subdireccion PV'),
+            Container(
+              child: const Text(
+                "Coordinación Carrera",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18, decoration: TextDecoration.none, color: Colors.black),
+              ),
+              color: Colors.grey,
+              width: double.infinity,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text("Cargo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Nombre", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Correo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Extensíon", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+              ],
+            ),
+            contenidoDirectorio_(context, 'Coordinacion Carrera'),
+            Container(
+              child: const Text(
+                "Coordinación Posgrado",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18, decoration: TextDecoration.none, color: Colors.black),
+              ),
+              color: Colors.grey,
+              width: double.infinity,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text("Cargo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Nombre", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Correo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Extensíon", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+              ],
+            ),
+            contenidoDirectorio_(context, 'Coordinacion Posgrado'),
+            Container(
+              child: const Text(
+                "Coordinación de Sistemas de Gestión",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18, decoration: TextDecoration.none, color: Colors.black),
+              ),
+              color: Colors.grey,
+              width: double.infinity,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text("Cargo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Nombre", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Correo", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+                Text("Extensíon", style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black),),
+              ],
+            ),
+            contenidoDirectorio_(context, 'Gestion'),
           ],
         ),
       ),
@@ -314,7 +391,7 @@ class Directory extends StatelessWidget {
         'Extension': '3005'
       },
     },
-    'Coordinaciones Gestion': {
+    'Gestion': {
       0: {
         'Cargo': 'Coordinador del Sistema de Gestión de la Calidad',
         'Nombre': 'Gutiérrez Manuel Carlos Alberto',
@@ -361,13 +438,13 @@ class Directory extends StatelessWidget {
         child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12),),
+        Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
         Text(listaDirectorio[seccion][0]['Nombre'][0].toString() +
             "\n" +
-            listaDirectorio[seccion][0]['Nombre'][1].toString(),style: const TextStyle(fontSize: 12),),
+            listaDirectorio[seccion][0]['Nombre'][1].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
         Text(listaDirectorio[seccion][0]['Correo'][0].toString() +
             "\n" +
-            listaDirectorio[seccion][0]['Correo'][1].toString(), style: const TextStyle(fontSize: 12),),
+            listaDirectorio[seccion][0]['Correo'][1].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
       ],
     ));
   }
@@ -387,18 +464,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][0]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][0]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][0]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][0]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][0]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][0]['Extension']),
+              Text(listaDirectorio[seccion][0]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -408,18 +485,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][1]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][1]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][1]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][1]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][1]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][1]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][1]['Extension']),
+              Text(listaDirectorio[seccion][1]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -429,18 +506,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][2]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][2]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][2]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][2]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][2]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][2]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][2]['Extension']),
+              Text(listaDirectorio[seccion][2]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -450,18 +527,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][3]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][3]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][3]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][3]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][3]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][3]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][3]['Extension']),
+              Text(listaDirectorio[seccion][3]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -471,18 +548,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][4]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][4]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][4]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][4]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][4]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][4]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][4]['Extension']),
+              Text(listaDirectorio[seccion][4]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -492,18 +569,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][5]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][5]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][5]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][5]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][5]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][5]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][5]['Extension']),
+              Text(listaDirectorio[seccion][5]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -513,18 +590,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][6]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][6]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][6]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][6]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][6]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][6]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][6]['Extension']),
+              Text(listaDirectorio[seccion][6]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -534,18 +611,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][7]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][7]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][7]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][7]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][7]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][7]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][7]['Extension']),
+              Text(listaDirectorio[seccion][7]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
           const SizedBox(
@@ -555,18 +632,18 @@ class Directory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                child: Text(listaDirectorio[seccion][8]['Cargo'].toString()),
+                child: Text(listaDirectorio[seccion][8]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 95,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][8]['Nombre'].toString()),
+                child: Text(listaDirectorio[seccion][8]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 80,
               ),
               SizedBox(
-                child: Text(listaDirectorio[seccion][8]['Correo'].toString()),
+                child: Text(listaDirectorio[seccion][8]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                 width: 170,
               ),
-              Text(listaDirectorio[seccion][8]['Extension']),
+              Text(listaDirectorio[seccion][8]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
             ],
           ),
         ],
@@ -583,18 +660,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString()),
-                  width: 90,
+                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
+                  width: 100,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][0]['Extension']),
+                Text(listaDirectorio[seccion][0]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -604,18 +681,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString()),
-                  width: 90,
+                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
+                  width: 100,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][1]['Extension']),
+                Text(listaDirectorio[seccion][1]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -625,18 +702,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString()),
-                  width: 90,
+                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
+                  width: 100,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][2]['Extension']),
+                Text(listaDirectorio[seccion][2]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -646,18 +723,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString()),
-                  width: 90,
+                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
+                  width: 100,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][3]['Extension']),
+                Text(listaDirectorio[seccion][3]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -667,18 +744,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString()),
-                  width: 90,
+                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
+                  width: 100,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][4]['Extension']),
+                Text(listaDirectorio[seccion][4]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -688,18 +765,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString()),
-                  width: 90,
+                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
+                  width: 100,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][5]['Extension']),
+                Text(listaDirectorio[seccion][5]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
           ],
@@ -717,18 +794,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][0]['Extension']),
+                Text(listaDirectorio[seccion][0]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -738,18 +815,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][1]['Extension']),
+                Text(listaDirectorio[seccion][1]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -759,18 +836,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][2]['Extension']),
+                Text(listaDirectorio[seccion][2]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -780,18 +857,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][3]['Extension']),
+                Text(listaDirectorio[seccion][3]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -801,18 +878,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][4]['Extension']),
+                Text(listaDirectorio[seccion][4]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -822,18 +899,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][5]['Extension']),
+                Text(listaDirectorio[seccion][5]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -843,18 +920,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][6]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][6]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][6]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][6]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][6]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][6]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][6]['Extension']),
+                Text(listaDirectorio[seccion][6]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none)),
               ],
             ),
           ],
@@ -872,18 +949,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none)),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none)),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none)),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][0]['Extension']),
+                Text(listaDirectorio[seccion][0]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -893,18 +970,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][1]['Extension']),
+                Text(listaDirectorio[seccion][1]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -914,18 +991,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][2]['Extension']),
+                Text(listaDirectorio[seccion][2]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -935,18 +1012,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][3]['Extension']),
+                Text(listaDirectorio[seccion][3]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none)),
               ],
             ),
             const SizedBox(
@@ -956,18 +1033,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][4]['Extension']),
+                Text(listaDirectorio[seccion][4]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -977,18 +1054,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][5]['Extension']),
+                Text(listaDirectorio[seccion][5]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -998,18 +1075,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][6]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][6]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][6]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][6]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][6]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][6]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][6]['Extension']),
+                Text(listaDirectorio[seccion][6]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1019,18 +1096,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][7]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][7]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][7]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][7]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][7]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][7]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][7]['Extension']),
+                Text(listaDirectorio[seccion][7]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1040,18 +1117,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][8]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][8]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][8]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][8]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][8]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][8]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][8]['Extension']),
+                Text(listaDirectorio[seccion][8]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1061,18 +1138,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][9]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][9]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][9]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][9]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][9]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][9]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][9]['Extension']),
+                Text(listaDirectorio[seccion][9]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
           ],
@@ -1090,18 +1167,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][0]['Extension']),
+                Text(listaDirectorio[seccion][0]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1111,18 +1188,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][1]['Extension']),
+                Text(listaDirectorio[seccion][1]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1132,25 +1209,25 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][2]['Extension']),
+                Text(listaDirectorio[seccion][2]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
           ],
         ),
       );
     }
-    if (seccion == 'Coordinacion Gestion') {
+    if (seccion == 'Gestion') {
       return Center(
         child: Column(
           children: [
@@ -1161,18 +1238,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][0]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][0]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][0]['Extension']),
+                Text(listaDirectorio[seccion][0]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1182,18 +1259,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][1]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][1]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][1]['Extension']),
+                Text(listaDirectorio[seccion][1]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1203,18 +1280,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][2]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][2]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][2]['Extension']),
+                Text(listaDirectorio[seccion][2]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1224,18 +1301,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][3]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][3]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][3]['Extension']),
+                Text(listaDirectorio[seccion][3]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1245,18 +1322,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][4]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][4]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][4]['Extension']),
+                Text(listaDirectorio[seccion][4]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
             const SizedBox(
@@ -1266,18 +1343,18 @@ class Directory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Cargo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 90,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Nombre'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 80,
                 ),
                 SizedBox(
-                  child: Text(listaDirectorio[seccion][5]['Correo'].toString()),
+                  child: Text(listaDirectorio[seccion][5]['Correo'].toString(), style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
                   width: 170,
                 ),
-                Text(listaDirectorio[seccion][5]['Extension']),
+                Text(listaDirectorio[seccion][5]['Extension'], style: const TextStyle(fontSize: 12, decoration: TextDecoration.none),),
               ],
             ),
           ],
