@@ -9,11 +9,22 @@ class Psubtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      subtitle ?? "",
-      style: const TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
+    // MediaQueryData queryData = MediaQuery.of(context);
+    // double heightSpace = queryData.size.height / 10;
+    // double widthSpace = queryData.size.width / 20;
+    return Container(
+      // margin: EdgeInsets.fromLTRB(
+      //   0,
+      //   heightSpace * 2 / 3,
+      //   0,
+      //   heightSpace * 1 / 3,
+      // ),
+      child: Text(
+        subtitle ?? "",
+        style: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }

@@ -44,18 +44,18 @@ class PlistItemDescription extends StatelessWidget {
               fontSize: 15,
             ),
           ),
-          WidgetSpan(
-            child: Container(
-              margin: const EdgeInsets.fromLTRB(2, 0, 0, 0),
-              child: RichText(
-                text: TextSpan(
-                  text: itemDescription,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                  ),
-                ),
-              ),
+          const TextSpan(
+            text: ' ',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 15,
+            ),
+          ),
+          TextSpan(
+            text: itemDescription,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 15,
             ),
           ),
         ],

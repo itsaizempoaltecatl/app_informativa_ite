@@ -10,12 +10,23 @@ class Ptitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title ?? "",
-      style: TextStyle(
-        fontSize: 30,
-        color: blueIte,
-        fontWeight: FontWeight.bold,
+    // MediaQueryData queryData = MediaQuery.of(context);
+    // double heightSpace = queryData.size.height / 10;
+    // double widthSpace = queryData.size.width / 20;
+    return Container(
+      // margin: const EdgeInsets.fromLTRB(
+      //   0,
+      //   10,
+      //   0,
+      //   5,
+      // ),
+      child: Text(
+        title ?? "",
+        style: TextStyle(
+          fontSize: 30,
+          color: blueIte,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
