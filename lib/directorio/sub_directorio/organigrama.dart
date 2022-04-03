@@ -16,9 +16,8 @@ class OrganizationChart extends StatelessWidget {
             },
           ),
           backgroundColor: blueIte,
-          middle: const Text(
-            'Organigrama',
-          ),
+          middle: const Text('Organigrama',
+              style: TextStyle(color: Colors.white, fontSize: 20)),
         ),
         child: Container(
           width: double.infinity,

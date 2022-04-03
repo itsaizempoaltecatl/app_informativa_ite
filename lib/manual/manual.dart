@@ -10,19 +10,14 @@ class Manual extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        backgroundColor: blueIte,
-        middle: const Text(
-          'Manual de identidad gráfica',
-          style: TextStyle(color: Colors.white, fontSize: 20),
+        navigationBar: CupertinoNavigationBar(
+          backgroundColor: blueIte,
+          middle: const Text(
+            'Manual de identidad gráfica',
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
         ),
-      ),
-      child: Container(
-          width: double.infinity,
-          alignment: Alignment.center,
-          color: Colors.white,
-          child: SfPdfViewer.network(
-              'https://www.ensenada.tecnm.mx/wp-content/uploads/2020/06/Manual_de_Identidad_Grafica-1.pdf')),
-    );
+        child: SfPdfViewer.network(
+            'https://www.ensenada.tecnm.mx/wp-content/uploads/2020/06/Manual_de_Identidad_Grafica-1.pdf'));
   }
 }
