@@ -1,13 +1,10 @@
 import 'package:app_informativa_ite/const/fonts.dart';
-import 'package:app_informativa_ite/directorio/directorio.dart';
-import 'package:app_informativa_ite/historia/historia_menu.dart';
-import 'package:app_informativa_ite/manual/manual.dart';
+import 'package:app_informativa_ite/bundle_main_views.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:line_icons/line_icons.dart';
-
-import '../aviso_privacidad/aviso_privacidad.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
