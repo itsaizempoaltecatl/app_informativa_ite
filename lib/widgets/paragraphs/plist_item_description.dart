@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:app_informativa_ite/widgets/paragraphs/bundle.dart';
 
 Widget lsymbol = const Text('');
 
@@ -32,32 +32,32 @@ class PlistItemDescription extends StatelessWidget {
                   (number != null
                       ? Text(
                           number.toString() + '. ',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 15,
+                            fontSize: fontSizeName,
                           ),
                         )
                       : lsymbol),
             ),
             TextSpan(
               text: itemName,
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 15,
+                fontSize: fontSizeName,
               ),
             ),
-            const TextSpan(
+            TextSpan(
               text: ' ',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 15,
+                fontSize: fontSizeName,
               ),
             ),
             TextSpan(
               text: itemDescription,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontSize: fontSizeDescription,
               ),
             ),
           ],

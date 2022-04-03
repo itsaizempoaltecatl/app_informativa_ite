@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:app_informativa_ite/widgets/paragraphs/bundle.dart';
 
 class Paragraphs {

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/widgets/paragraphs/bundle.dart';
 
 class Ptitle extends StatelessWidget {
   final String? title;
@@ -10,15 +9,12 @@ class Ptitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // MediaQueryData queryData = MediaQuery.of(context);
-    // double heightSpace = queryData.size.height / 10;
-    // double widthSpace = queryData.size.width / 20;
     return Container(
       margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: Text(
         title ?? "",
         style: TextStyle(
-          fontSize: 30,
+          fontSize: titleFontSize,
           color: blueIte,
           fontWeight: FontWeight.bold,
         ),

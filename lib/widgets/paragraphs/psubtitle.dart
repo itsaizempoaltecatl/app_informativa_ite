@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:app_informativa_ite/widgets/paragraphs/bundle.dart';
 
 class Psubtitle extends StatelessWidget {
   final String? subtitle;
@@ -9,15 +9,12 @@ class Psubtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // MediaQueryData queryData = MediaQuery.of(context);
-    // double heightSpace = queryData.size.height / 10;
-    // double widthSpace = queryData.size.width / 20;
     return Container(
       margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
       child: Text(
         subtitle ?? "",
-        style: const TextStyle(
-          fontSize: 20,
+        style: TextStyle(
+          fontSize: subtitleFontSize,
           fontWeight: FontWeight.bold,
         ),
       ),

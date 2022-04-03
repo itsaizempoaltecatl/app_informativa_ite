@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:app_informativa_ite/widgets/paragraphs/bundle.dart';
 
 class Pparagraph extends StatelessWidget {
   final String? paragraph;
@@ -13,7 +13,7 @@ class Pparagraph extends StatelessWidget {
       child: Text(
         paragraph ?? "",
         textAlign: textAlign,
-        style: const TextStyle(fontSize: 15),
+        style: TextStyle(fontSize: paragraphFontSize),
       ),
     );
   }
