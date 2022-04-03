@@ -10,21 +10,16 @@ class Paragraphs {
     return Psubtitle(subtitle: subtitle);
   }
 
-  Widget paragraph(String? text) {
-    return Pparagraph(paragraph: text);
+  Widget paragraph(String? text, {TextAlign? textAlign}) {
+    return Pparagraph(paragraph: text, textAlign: textAlign);
   }
 
-  Widget listItemDescription({
-    Icon? icon,
-    int? number,
-    String? itemName,
-    String? itemDescription,
-  }) {
+  Widget listItemDescription(
+      {Icon? icon, int? number, String? itemName, String? itemDescription}) {
     return PlistItemDescription(
-      icon: icon,
-      number: number,
-      itemName: itemName,
-      itemDescription: itemDescription,
-    );
+        icon: icon,
+        number: number,
+        itemName: itemName,
+        itemDescription: itemDescription);
   }
 }

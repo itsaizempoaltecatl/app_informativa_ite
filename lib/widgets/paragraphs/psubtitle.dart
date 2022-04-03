@@ -13,12 +13,7 @@ class Psubtitle extends StatelessWidget {
     // double heightSpace = queryData.size.height / 10;
     // double widthSpace = queryData.size.width / 20;
     return Container(
-      // margin: EdgeInsets.fromLTRB(
-      //   0,
-      //   heightSpace * 2 / 3,
-      //   0,
-      //   heightSpace * 1 / 3,
-      // ),
+      margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
       child: Text(
         subtitle ?? "",
         style: const TextStyle(

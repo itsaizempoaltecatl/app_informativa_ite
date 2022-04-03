@@ -14,12 +14,7 @@ class Ptitle extends StatelessWidget {
     // double heightSpace = queryData.size.height / 10;
     // double widthSpace = queryData.size.width / 20;
     return Container(
-      // margin: const EdgeInsets.fromLTRB(
-      //   0,
-      //   10,
-      //   0,
-      //   5,
-      // ),
+      margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: Text(
         title ?? "",
         style: TextStyle(

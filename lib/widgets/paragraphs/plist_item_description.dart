@@ -17,48 +17,51 @@ class PlistItemDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      textAlign: TextAlign.justify,
-      text: TextSpan(
-        style: const TextStyle(
-          color: Colors.black,
+    return Container(
+      margin: const EdgeInsets.fromLTRB(10, 0, 10, 3),
+      child: RichText(
+        textAlign: TextAlign.justify,
+        text: TextSpan(
+          style: const TextStyle(
+            color: Colors.black,
+          ),
+          children: [
+            WidgetSpan(
+              baseline: TextBaseline.alphabetic,
+              child: icon ??
+                  (number != null
+                      ? Text(
+                          number.toString() + '. ',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        )
+                      : lsymbol),
+            ),
+            TextSpan(
+              text: itemName,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+            ),
+            const TextSpan(
+              text: ' ',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+            ),
+            TextSpan(
+              text: itemDescription,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 15,
+              ),
+            ),
+          ],
         ),
-        children: [
-          WidgetSpan(
-            baseline: TextBaseline.alphabetic,
-            child: icon ??
-                (number != null
-                    ? Text(
-                        number.toString() + '. ',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      )
-                    : lsymbol),
-          ),
-          TextSpan(
-            text: itemName,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 15,
-            ),
-          ),
-          const TextSpan(
-            text: ' ',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 15,
-            ),
-          ),
-          TextSpan(
-            text: itemDescription,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 15,
-            ),
-          ),
-        ],
       ),
     );
   }
