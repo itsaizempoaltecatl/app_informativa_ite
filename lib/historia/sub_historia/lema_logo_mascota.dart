@@ -13,6 +13,7 @@ class MottoLogoPet extends StatelessWidget {
     double heightSpace = queryData.size.height / 10;
     double widthSpace = queryData.size.width / 20;
     return CupertinoPageScaffold(
+      backgroundColor: Colors.white,
       navigationBar: CupertinoNavigationBar(
         leading: CupertinoNavigationBarBackButton(
           color: Colors.white,
