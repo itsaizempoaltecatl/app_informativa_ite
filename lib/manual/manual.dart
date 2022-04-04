@@ -1,4 +1,5 @@
 import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,13 +11,7 @@ class Manual extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-        navigationBar: CupertinoNavigationBar(
-          backgroundColor: blueIte,
-          middle: const Text(
-            'Manual de identidad gráfica',
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-        ),
+        navigationBar: navBar('Manual de identidad gráfica'),
         child: SfPdfViewer.network(
             'https://www.ensenada.tecnm.mx/wp-content/uploads/2020/06/Manual_de_Identidad_Grafica-1.pdf'));
   }

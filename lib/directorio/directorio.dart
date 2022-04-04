@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:app_informativa_ite/directorio/sub_directorio/organigrama.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,23 +14,8 @@ class Directory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        backgroundColor: blueIte,
-        middle: const Text(
-          'Directorio',
-        ),
-        trailing: CupertinoButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => const OrganizationChart()));
-            },
-            child: const Icon(
-              LineIcons.sitemap,
-              color: Colors.white,
-            )),
-      ),
+      navigationBar: navBar('Directorio',
+          pushContext: context, pushPage: const OrganizationChart()),
       child: Container(
         color: Colors.white,
         width: double.infinity,

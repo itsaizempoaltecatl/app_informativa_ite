@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'package:line_icons/line_icons.dart';
 
+import '../widgets/paragraphs/const/font.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({
     Key? key,
@@ -20,31 +22,27 @@ class HomePage extends StatelessWidget {
         inactiveColor: Colors.white,
         activeColor: const Color(0xFFC0C4C6),
         iconSize: 35,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-              icon: Icon(
-                LineIcons.history,
-                color: Colors.white,
-              ),
-              label: 'Historia'),
+              icon: ContentBottomNavigationBarItem(
+            iconData: LineIcons.history,
+            title: 'Historia',
+          )),
           BottomNavigationBarItem(
-              icon: Icon(
-                LineIcons.addressBook,
-                color: Colors.white,
-              ),
-              label: 'Directorio'),
+              icon: ContentBottomNavigationBarItem(
+            iconData: LineIcons.addressBook,
+            title: 'Directorio',
+          )),
           BottomNavigationBarItem(
-              icon: Icon(
-                LineIcons.fileInvoice,
-                color: Colors.white,
-              ),
-              label: 'Aviso'),
+              icon: ContentBottomNavigationBarItem(
+            iconData: LineIcons.fileInvoice,
+            title: 'Aviso',
+          )),
           BottomNavigationBarItem(
-              icon: Icon(
-                LineIcons.book,
-                color: Colors.white,
-              ),
-              label: 'Manual')
+              icon: ContentBottomNavigationBarItem(
+            iconData: LineIcons.book,
+            title: 'Manual',
+          )),
         ],
       ),
       tabBuilder: (context, index) {
@@ -71,6 +69,34 @@ class HomePage extends StatelessWidget {
             });
         }
       },
+    );
+  }
+}
+
+class ContentBottomNavigationBarItem extends StatelessWidget {
+  IconData iconData;
+  String title;
+  ContentBottomNavigationBarItem(
+      {Key? key, required this.iconData, required this.title})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const SizedBox(
+          height: 5,
+        ),
+        Icon(
+          iconData,
+          color: Colors.white,
+          size: 30,
+        ),
+        Text(
+          title,
+          style: textStyleMonserrat(size: 15, color: Colors.white),
+        )
+      ],
     );
   }
 }

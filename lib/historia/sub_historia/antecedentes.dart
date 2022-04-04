@@ -1,4 +1,5 @@
 import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,17 +16,7 @@ class _PastState extends State<Past> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        leading: CupertinoNavigationBarBackButton(
-          color: Colors.white,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        backgroundColor: blueIte,
-        middle: const Text('Antecedentes',
-            style: TextStyle(color: Colors.white, fontSize: 20)),
-      ),
+      navigationBar: navBar('Antecedentes', popContext: context),
       child: SfPdfViewer.network(
         'https://www.ensenada.tecnm.mx/wp-content/themes/tecnm/Documentos/libro.pdf',
       ),

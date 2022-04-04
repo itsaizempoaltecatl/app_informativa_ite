@@ -1,4 +1,5 @@
 import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:app_informativa_ite/widgets/paragraphs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,17 +15,7 @@ class MottoLogoPet extends StatelessWidget {
     double widthSpace = queryData.size.width / 20;
     return CupertinoPageScaffold(
       backgroundColor: Colors.white,
-      navigationBar: CupertinoNavigationBar(
-        leading: CupertinoNavigationBarBackButton(
-          color: Colors.white,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        backgroundColor: blueIte,
-        middle: const Text('Lema, logo y mascota',
-            style: TextStyle(color: Colors.white, fontSize: 20)),
-      ),
+      navigationBar: navBar('Lema, logo y mascota', popContext: context),
       child: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(

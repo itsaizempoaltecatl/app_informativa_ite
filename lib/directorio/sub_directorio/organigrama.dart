@@ -1,4 +1,5 @@
 import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,17 +9,7 @@ class OrganizationChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-        navigationBar: CupertinoNavigationBar(
-          leading: CupertinoNavigationBarBackButton(
-            color: Colors.white,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          backgroundColor: blueIte,
-          middle: const Text('Organigrama',
-              style: TextStyle(color: Colors.white, fontSize: 20)),
-        ),
+        navigationBar: navBar('Organigrama', popContext: context),
         child: Container(
           width: double.infinity,
           height: double.infinity,

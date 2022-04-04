@@ -7,19 +7,15 @@ import 'package:app_informativa_ite/historia/sub_historia/mision_vision_valores.
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../const/nav_bar.dart';
+
 class History extends StatelessWidget {
   const History({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        backgroundColor: blueIte,
-        middle: const Text(
-          'Historia',
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-      ),
+      navigationBar: navBar('Historia'),
       child: Container(
           color: Colors.white,
           width: double.infinity,

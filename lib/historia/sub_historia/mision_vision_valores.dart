@@ -1,3 +1,4 @@
+import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:app_informativa_ite/const/fonts.dart';
@@ -13,17 +14,7 @@ class MisionVisionValues extends StatelessWidget {
     double widthSpace = queryData.size.width / 20;
     return CupertinoPageScaffold(
       backgroundColor: Colors.white,
-      navigationBar: CupertinoNavigationBar(
-        leading: CupertinoNavigationBarBackButton(
-          color: Colors.white,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        backgroundColor: blueIte,
-        middle: const Text('Misión, Visión y Valores',
-            style: TextStyle(color: Colors.white, fontSize: 20)),
-      ),
+      navigationBar: navBar('Misión, Visión y Valores', popContext: context),
       child: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
