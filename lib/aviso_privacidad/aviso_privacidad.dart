@@ -35,10 +35,10 @@ class Privacy extends StatelessWidget {
                         style:
                             textStyleMonserrat(size: 15, color: Colors.black),
                         children: [
-                          const TextSpan(
+                           TextSpan(
                               text:
                                   '¿Para qué fines utilizaremos sus datos personales?\n\n',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
+                              style: textStyleMonserrat(fontWeight: FontWeight.bold)),
                           const TextSpan(
                               text:
                                   'Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:\n\n•Para la inscripción del alumno en el sistema escolar\n•Reclutamiento, contratación y selección del personal\n\n'),
@@ -80,21 +80,21 @@ class Privacy extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       RichText(
-                          text: const TextSpan(
+                          text: TextSpan(
                         text: 'Destinatario de los\n datos personales',
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
+                        style: textStyleMonserrat(
+                            fontWeight: FontWeight.bold, color: Colors.black),
                       )),
                       RichText(
-                          text: const TextSpan(
+                          text: TextSpan(
                         text: '	Finalidad',
-                        style: TextStyle(
+                        style: textStyleMonserrat(
                             color: Colors.black, fontWeight: FontWeight.bold),
                       )),
                       RichText(
-                          text: const TextSpan(
+                          text: TextSpan(
                         text: '	Requiere del\n consentimiento',
-                        style: TextStyle(
+                        style: textStyleMonserrat(
                             color: Colors.black, fontWeight: FontWeight.bold),
                       )),
                     ],
@@ -104,24 +104,27 @@ class Privacy extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       RichText(
-                          text: const TextSpan(
+                          text:  TextSpan(
                         text:
                             'Dirección General del \nTecnológico \nNacional de México',
-                        style: TextStyle(color: Colors.black),
+                        style: textStyleMonserrat(
+                            color: Colors.black),
                       )),
                       RichText(
-                          text: const TextSpan(
+                          text: TextSpan(
                         text:
                             'Seguimiento \nescolar,\n seguimiento \nde egresados \ny contratación\n del personal',
-                        style: TextStyle(color: Colors.black),
+                        style: textStyleMonserrat(
+                            color: Colors.black)
                       )),
                       const SizedBox(
                         width: 15,
                       ),
                       RichText(
-                          text: const TextSpan(
+                          text:  TextSpan(
                         text: 'No',
-                        style: TextStyle(color: Colors.black),
+                        style: textStyleMonserrat(
+                            color: Colors.black),
                       )),
                     ],
                   ),
@@ -130,22 +133,25 @@ class Privacy extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       RichText(
-                          text: const TextSpan(
+                          text:  TextSpan(
                         text: 'Dirección General\n del Personal',
-                        style: TextStyle(color: Colors.black),
+                        style: textStyleMonserrat(
+                            color: Colors.black),
                       )),
                       RichText(
-                          text: const TextSpan(
+                          text:  TextSpan(
                         text: '	Contratación del\n personal',
-                        style: TextStyle(color: Colors.black),
+                        style: textStyleMonserrat(
+                            color: Colors.black),
                       )),
                       const SizedBox(
                         width: 15,
                       ),
                       RichText(
-                          text: const TextSpan(
+                          text:  TextSpan(
                         text: 'No',
-                        style: TextStyle(color: Colors.black),
+                        style: textStyleMonserrat(
+                            color: Colors.black),
                       )),
                     ],
                   )
@@ -153,37 +159,42 @@ class Privacy extends StatelessWidget {
                 const SizedBox(height: 15),
                 RichText(
                     textAlign: TextAlign.justify,
-                    text: const TextSpan(
+                    text:  TextSpan(
                         text:
                             'Con relación a las transferencias que requieren su consentimiento, si usted después de leer este aviso de privacidad no manifiesta su negativa para que las mismas se lleven a cabo, entenderemos que nos lo ha otorgado. Ponemos a su disposición el siguiente mecanismo para que, en su caso, nos pueda comunicar su negativa para que dichas transferencias se realicen:enviando un correo electrónico a computo@ite.edu.mx\n\n\n',
-                        style: TextStyle(color: Colors.black),
+                        style: textStyleMonserrat(
+                            color: Colors.black),
                         children: [
                           TextSpan(
                               text:
                                   '¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso?\n\n',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(
+                              style: textStyleMonserrat(
+                            color: Colors.black, fontWeight: FontWeight.bold)),
+                         const TextSpan(
                               text:
                                   'Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.\nPara el ejercicio de cualquiera de los derechos ARCO, usted deberá presentar la solicitud respectiva a través del siguiente medio:enviando un correo electrónico a computo@ite.edu.mx\n\nPara conocer el procedimiento y requisitos para el ejercicio de los derechos ARCO, ponemos a su disposición el siguiente medio:En el caso de los estudiantes, lo podrán hacer mediante el acceso al Sistema Integral de Información (SII), mientras que en el caso del personal, lo deberán solicitar directamente al Departamento de Recursos Humanos.\n\nLos datos de contacto de la persona o departamento de datos personales, que está a cargo de dar trámite a las solicitudes de derechos ARCO, son los siguientes:\na) Nombre de la persona o departamento de datos personales: Jefe del Centro de Cómputo\nb) Domicilio: calle Blvd Tecnológico 150, colonia Ex Ejido Chapultepec, ciudad Ensenada, municipio o delegación Ensenada, c.p. 22780, en la entidad de Baja California, país México,'),
                           TextSpan(
                               text:
                                   ' Usted puede revocar su consentimiento para el uso de sus datos personales.',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(
+                              style: textStyleMonserrat(
+                            color: Colors.black, fontWeight: FontWeight.bold)),
+                        const  TextSpan(
                               text:
                                   '\n\nUsted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante que tenga en cuenta que no en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que por alguna obligación legal requiramos seguir tratando sus datos personales.  Asimismo, usted deberá considerar que para ciertos fines, la revocación de su consentimiento implicará que no le podamos seguir prestando el servicio que nos solicitó, o la conclusión de su relación con nosotros.Para revocar su consentimiento deberá presentar su solicitud a través del siguiente medio:enviando un correo electrónico a computo@ite.edu.mx\nCon relación al procedimiento y requisitos para la revocación de su consentimiento, le informamos lo siguiente:a) ¿A través de qué medios pueden acreditar su identidad el titular y, en su caso, su representante, así como la personalidad este último?\ncorreo electrónico institucional b) ¿Qué información y/o documentación deberá contener la solicitud?\ndebe indicar en asunto REVOCACIÓN DE CONSENTIMIENTO y el mensaje deberá indicar su número de control, nombre completo así con el texto “deseo revocar mi consentimiento para trasladar mis datos personales”. c) ¿En cuántos días le daremos respuesta a su solicitud?\ndos días hábiles d) ¿Por qué medio le comunicaremos la respuesta a su solicitud? correo electrónico institucional\n\n'),
                           TextSpan(
                               text:
                                   '¿Cómo puede limitar el uso o divulgación de su información personal?\n',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(
+                              style: textStyleMonserrat(
+                            color: Colors.black, fontWeight: FontWeight.bold)),
+                         const TextSpan(
                               text:
                                   'Con objeto de que usted pueda limitar el uso y divulgación de su información personal, le ofrecemos los siguientes medios:enviando un correo electrónico a computo@ite.edu.mx en donde el asunto debe decir ARCO y en el cuerpo del mensaje expresar que limita el uso de sus datos personales. Éste correo deberá ser enviado sólo desde el correo institucional'),
                           TextSpan(
                               text:
                                   '\n\n¿Cómo puede conocer los cambios en este aviso de privacidad?\n',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(
+                              style: textStyleMonserrat(
+                            color: Colors.black, fontWeight: FontWeight.bold)),
+                        const  TextSpan(
                               text:
                                   'El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas.Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, a través de: página web de la institución.\n\nEl procedimiento a través del cual se llevarán a cabo las notificaciones sobre cambios o actualizaciones al presente aviso de privacidad es el siguiente:\n\nDentro del menú “Nosotros” en la página principal del ITE en www.ensenada.tecnm.mx\n\nÚltima actualización: 02/07/2018')
                         ]))
