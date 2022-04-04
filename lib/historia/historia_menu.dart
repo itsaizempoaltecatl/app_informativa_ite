@@ -53,7 +53,7 @@ class ButtonMenu extends StatelessWidget {
     return ElevatedButton(
       style: TextButton.styleFrom(
           primary: Colors.white,
-          textStyle: const TextStyle(fontSize: 20),
+          textStyle: textStyleMonserrat(size: 35, fontWeight: FontWeight.bold),
           backgroundColor: const Color(0xFF1b396a),
           minimumSize: const Size(double.infinity, 70)),
       onPressed: () {
@@ -62,7 +62,6 @@ class ButtonMenu extends StatelessWidget {
       },
       child: Text(
         label,
-        style: const TextStyle(fontSize: 40),
       ),
     );
   }
