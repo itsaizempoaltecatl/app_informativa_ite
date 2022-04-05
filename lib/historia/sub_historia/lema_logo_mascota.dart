@@ -1,4 +1,3 @@
-import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:app_informativa_ite/widgets/paragraphs.dart';
 import 'package:flutter/cupertino.dart';
