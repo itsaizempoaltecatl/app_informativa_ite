@@ -14,28 +14,42 @@ class History extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQuery = MediaQuery.of(context);
+    double sizeWidth = mediaQuery.size.width;
+    double sizeHeight = mediaQuery.size.height;
     return CupertinoPageScaffold(
       navigationBar: navBar('Historia'),
       child: Container(
           color: Colors.white,
           width: double.infinity,
           height: double.infinity,
-          padding: const EdgeInsets.fromLTRB(20, 100, 20, 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+          child: ListView(
+            physics: (sizeHeight <= 600)
+                ? const ClampingScrollPhysics()
+                : const NeverScrollableScrollPhysics(),
             children: [
-              ButtonMenu(label: 'Antecedentes', screen: const Past()),
+              SizedBox(
+                height: sizeHeight <= 600 ? 50 : 150,
+              ),
+              ButtonMenu(
+                  label: 'Antecedentes',
+                  screen: const Past(),
+                  sizeWhidth: sizeWidth),
               const SizedBox(
                 height: 50,
               ),
               ButtonMenu(
                   label: 'Misión, Visión y Valores',
-                  screen: const MisionVisionValues()),
+                  screen: const MisionVisionValues(),
+                  sizeWhidth: sizeWidth),
               const SizedBox(
                 height: 50,
               ),
               ButtonMenu(
-                  label: 'Lema, logo y mascota', screen: const MottoLogoPet())
+                  label: 'Lema, logo y mascota',
+                  screen: const MottoLogoPet(),
+                  sizeWhidth: sizeWidth)
             ],
           )),
     );
@@ -45,7 +59,12 @@ class History extends StatelessWidget {
 class ButtonMenu extends StatelessWidget {
   String label;
   var screen;
-  ButtonMenu({Key? key, required this.label, required this.screen})
+  double sizeWhidth;
+  ButtonMenu(
+      {Key? key,
+      required this.label,
+      required this.screen,
+      required this.sizeWhidth})
       : super(key: key);
 
   @override
@@ -53,15 +72,20 @@ class ButtonMenu extends StatelessWidget {
     return ElevatedButton(
       style: TextButton.styleFrom(
           primary: Colors.white,
-          textStyle: textStyleMonserrat(size: 35, fontWeight: FontWeight.bold),
+          textStyle: textStyleMonserrat(
+              size: sizeWhidth / (sizeWhidth > 330 ? 15 : 20),
+              fontWeight: FontWeight.bold),
           backgroundColor: const Color(0xFF1b396a),
-          minimumSize: const Size(double.infinity, 70)),
+          minimumSize: Size(double.infinity, sizeWhidth / 10)),
       onPressed: () {
         Navigator.push(
             context, CupertinoPageRoute(builder: (context) => screen));
       },
-      child: Text(
-        label,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 15, bottom: 15),
+        child: Text(
+          label,
+        ),
       ),
     );
   }
