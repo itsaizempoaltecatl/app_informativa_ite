@@ -1,5 +1,6 @@
 import 'package:app_informativa_ite/widgets/paragraphs/bundle.dart';
 
+
 Widget lsymbol = const Text('');
 
 class PlistItemDescription extends StatelessWidget {
@@ -32,19 +33,15 @@ class PlistItemDescription extends StatelessWidget {
                   (number != null
                       ? Text(
                           number.toString() + '. ',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: fontSizeName,
-                          ),
+                          style: textStyleMonserrat(
+                              fontWeight: FontWeight.bold, size: fontSizeName),
                         )
                       : lsymbol),
             ),
             TextSpan(
               text: itemName,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: fontSizeName,
-              ),
+              style: textStyleMonserrat(
+                  fontWeight: FontWeight.bold, size: fontSizeName),
             ),
             TextSpan(
               text: ' ',
@@ -55,10 +52,8 @@ class PlistItemDescription extends StatelessWidget {
             ),
             TextSpan(
               text: itemDescription,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: fontSizeDescription,
-              ),
+              style: textStyleMonserrat(
+                  size: fontSizeDescription, color: Colors.black),
             ),
           ],
         ),

@@ -13,7 +13,7 @@ class Pparagraph extends StatelessWidget {
       child: Text(
         paragraph ?? "",
         textAlign: textAlign,
-        style: TextStyle(fontSize: paragraphFontSize),
+        style: textStyleMonserrat(size: paragraphFontSize)
       ),
     );
   }

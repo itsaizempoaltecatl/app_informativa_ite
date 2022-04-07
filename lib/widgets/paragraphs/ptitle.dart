@@ -13,11 +13,8 @@ class Ptitle extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: Text(
         title ?? "",
-        style: TextStyle(
-          fontSize: titleFontSize,
-          color: blueIte,
-          fontWeight: FontWeight.bold,
-        ),
+        style: textStyleMonserrat(
+            size: titleFontSize, color: blueIte, fontWeight: FontWeight.bold),
       ),
     );
   }

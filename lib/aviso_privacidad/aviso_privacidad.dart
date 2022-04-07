@@ -1,8 +1,10 @@
+import 'package:app_informativa_ite/const/datosperso.dart';
 import 'package:app_informativa_ite/const/fonts.dart';
 import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:app_informativa_ite/widgets/paragraphs.dart';
+
 
 class Privacy extends StatelessWidget {
   const Privacy({Key? key}) : super(key: key);
@@ -17,6 +19,8 @@ class Privacy extends StatelessWidget {
       navigationBar: navBar('Aviso de Privacidad'),
       child: Container(
         color: Colors.white,
+        width: double.infinity,
+        height: double.infinity,
         child: SingleChildScrollView(
           child: Container(
                margin: EdgeInsets.only(
@@ -29,7 +33,8 @@ class Privacy extends StatelessWidget {
            
             color: Colors.white,
             child: Column(
-              children: [
+              mainAxisSize: MainAxisSize.max,
+              children:<Widget> [
                 t.title('AVISO DE PRIVACIDAD'),
                 t.paragraph('INSTITUTO TECNOLOGICO DE ENSENADA, mejor conocido como ITE, con domicilio en calle BLVD TECNOLOGICO 150, colonia EX EJIDO CHAPULTEPEC, ciudad ENSENADA, municipio o delegación ENSENADA, cp. 22780, en la entidad de BAJA CALIFORNIA, país MEXICO, y portal de internet www.ensenada.tecnm.mx/sii, gestion.ensenada.tecnm.mx, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:',textAlign: TextAlign.justify),
                 t.subtitle('¿Para qué fines utilizaremos sus datos personales?'),
@@ -43,15 +48,35 @@ class Privacy extends StatelessWidget {
 
                 t.paragraph('De manera adicional, utilizaremos su información personal para las siguientes finalidades secundarias que no son necesarias para el servicio solicitado, pero que nos permiten y facilitan brindarle una mejor atención:',textAlign: TextAlign.justify),
                 
-                t.listItemDescription(icon: const Icon(Icons.keyboard_arrow_right, color: Colors.black,), itemDescription:'para creación, análisis, estudio, conservación y actualización del expediente del estudiante durante su carrera escolar así como seguimiento de egresado'),
+                t.listItemDescription(icon: const Icon(Icons.keyboard_arrow_right, color: Colors.black,), itemDescription:'Para creación, análisis, estudio, conservación y actualización del expediente del estudiante durante su carrera escolar así como seguimiento de egresado.\n'),
                 t.paragraph('En caso de que no desee que sus datos personales sean tratados para estos fines secundarios, desde este momento usted nos puede comunicar lo anterior a través del siguiente mecanismo:',textAlign: TextAlign.justify),
                 t.paragraph('enviando un correo electrónico a computo@ite.edu.mxLa negativa para el uso de sus datos personales para estas finalidades no podrá ser un motivo para que le neguemos los servicios y productos que solicita o contrata con nosotros.',textAlign: TextAlign.justify),
                 t.subtitle('¿Qué datos personales utilizaremos para estos fines?'),
                 const SizedBox(
                 height: 5,
               ),
-                t.paragraph('Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:',textAlign: TextAlign.justify),
+                t.paragraph('Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:\n',textAlign: TextAlign.justify),
                 /*list builder que no pude hacer por que soy noob**/
+                
+                t.paragraph("•Nombre\n•Estado Civil\n•Registro Federal de Contribuyentes(RFC)\n•Clave única de Registro de Población (CURP)\n•Lugar de nacimiento\n•Fecha de nacimiento\n•Nacionalidad\n•Domicilio\n•Teléfono particular\n•Teléfono celular\n•Correo electrónico\n•Edad\n•Fotografía\n•Señas particulares\n•Tipo de sangre\n•Puesto o cargo que desempeña\n•Domicilio de trabajo\n•Correo electrónico institucional\n•Teléfono institucional\n•Referencias laborales\n•Información generada durante los procesos de reclutamiento, selección y contratación\n•Capacitación laboral\n•Trayectoria educativa\n•Títulos\n•Cédula profesional\n•Certificados\n•Reconocimientos\n•Datos de identificación\n•Datos de contacto\n•Datos académicos"),
+                     
+                      
+                            
+                             
+              
+              
+                
+                    
+                    
+                       
+                
+
+                
+                
+              
+
+                  
+                
                 t.paragraph('Además de los datos personales mencionados anteriormente, para las finalidades informadas en el presente aviso de privacidad utilizaremos los siguientes datos personales considerados como sensibles, que requieren de especial protección:',textAlign: TextAlign.justify),
                  t.listItemDescription(icon: const Icon(Icons.keyboard_arrow_right, color: Colors.black,), itemDescription:'Datos de salud',),
                

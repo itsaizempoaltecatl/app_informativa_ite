@@ -13,10 +13,8 @@ class Psubtitle extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
       child: Text(
         subtitle ?? "",
-        style: TextStyle(
-          fontSize: subtitleFontSize,
-          fontWeight: FontWeight.bold,
-        ),
+        style: textStyleMonserrat(
+            size: subtitleFontSize, fontWeight: FontWeight.bold),
       ),
     );
   }
