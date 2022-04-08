@@ -58,9 +58,31 @@ class Privacy extends StatelessWidget {
                 t.paragraph('Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:\n',textAlign: TextAlign.justify),
                 /*list builder que no pude hacer por que soy noob**/
                 
-                t.paragraph("•Nombre\n•Estado Civil\n•Registro Federal de Contribuyentes(RFC)\n•Clave única de Registro de Población (CURP)\n•Lugar de nacimiento\n•Fecha de nacimiento\n•Nacionalidad\n•Domicilio\n•Teléfono particular\n•Teléfono celular\n•Correo electrónico\n•Edad\n•Fotografía\n•Señas particulares\n•Tipo de sangre\n•Puesto o cargo que desempeña\n•Domicilio de trabajo\n•Correo electrónico institucional\n•Teléfono institucional\n•Referencias laborales\n•Información generada durante los procesos de reclutamiento, selección y contratación\n•Capacitación laboral\n•Trayectoria educativa\n•Títulos\n•Cédula profesional\n•Certificados\n•Reconocimientos\n•Datos de identificación\n•Datos de contacto\n•Datos académicos"),
                      
+                      Expanded(
+                        child: Container(
                       
+                        height: double.infinity,
+                        child: ListView.builder(
+
+                      
+                        itemCount: datos.length,
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemBuilder: (context, index){
+                          String key = datos.keys.elementAt(index);
+                        return Column(
+                          children:<Widget> [
+                              ListTile(
+                                title: Expanded(child: Text(key)),
+                                subtitle: Expanded(child: Text("${datos[key]}")),
+                              )
+                          ],
+                        );
+                      }
+                      ),
+                      )
+                      ),
                             
                              
               
