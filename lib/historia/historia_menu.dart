@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables
 
-import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/fuentes.dart';
 import 'package:app_informativa_ite/historia/sub_historia/antecedentes.dart';
 import 'package:app_informativa_ite/historia/sub_historia/lema_logo_mascota.dart';
 import 'package:app_informativa_ite/historia/sub_historia/mision_vision_valores.dart';

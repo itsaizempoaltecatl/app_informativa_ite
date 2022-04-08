@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/fuentes.dart';
 import 'package:app_informativa_ite/bundle_main_views.dart';
 
 import 'package:flutter/cupertino.dart';

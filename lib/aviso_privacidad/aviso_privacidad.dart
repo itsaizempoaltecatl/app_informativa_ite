@@ -1,5 +1,5 @@
-import 'package:app_informativa_ite/const/datosperso.dart';
-import 'package:app_informativa_ite/const/fonts.dart';
+import 'package:app_informativa_ite/const/fuentes.dart';
+import 'package:app_informativa_ite/const/mapeo.dart';
 import 'package:app_informativa_ite/const/nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
